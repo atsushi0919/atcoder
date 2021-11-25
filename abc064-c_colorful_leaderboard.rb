@@ -32,22 +32,8 @@ def solve(input_lines)
 
   r = Array.new(color + 1, 0)
   a.each do |sc|
-    if sc < 400
-      r[0] += 1
-    elsif sc < 800
-      r[1] += 1
-    elsif sc < 1200
-      r[2] += 1
-    elsif sc < 1600
-      r[3] += 1
-    elsif sc < 2000
-      r[4] += 1
-    elsif sc < 2400
-      r[5] += 1
-    elsif sc < 2800
-      r[6] += 1
-    elsif sc < 3200
-      r[7] += 1
+    if sc < 3200
+      r[sc / 400] += 1
     else
       r[8] += 1
     end
